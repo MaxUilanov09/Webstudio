@@ -1,0 +1,44 @@
+:root{
+    --title-text-color: #212121;
+    --mouse-targeted-object-color: #2196F3;
+    --p-text-color: #757575;
+    --first-section-bg-color: #2F303A;
+    --third-section-bg-color: #F5F4FA;
+    --pure-white: #FFFFFF;
+    --sixty-percent-white: rgba(255, 255, 255, 0.6);
+}
+
+/*I don't know how to do multicolored text for word 'WebStudio'*/
+
+p, .plain-text-color{
+    color: var(--p-text-color);
+}
+
+.untapped-header-link, h2, h4{
+    color: var(--title-text-color);
+}
+
+.tapped-header-link{
+    color:var(--mouse-targeted-object-color)
+}
+
+.first-section, footer{
+    background: var(--first-section-bg-color);
+}
+
+.third-section{
+    background: var(--third-section-bg-color);
+}
+
+.first-section > h1, .white-text{
+    color: var(--pure-white);
+}
+
+.first-section > button{
+    color: var(--pure-white);
+    background-color: var(--mouse-targeted-object-color);
+}
+
+.unpure-white-text{
+    color: var(--sixty-percent-white);
+}
