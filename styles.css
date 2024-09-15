@@ -14,12 +14,29 @@ body {
     font-family: 'Roboto';
 }
 
-h3 {
+h1 {
+    font-weight: 900;
+}
+
+h2, h4 {
+    font-weight: 700;
+}
+
+.web-studio {
     font-family: 'Raleway';
+    font-weight: 700;
+}
+header {
+    font-weight: 500;
+}
+
+footer {
+    font-weight: 400;
 }
 
 p, .plain-text-color {
     color: var(--p-text-color);
+    font-weight: 400;
 }
 
 .header-link, h2, h4 {
@@ -42,8 +59,13 @@ p, .plain-text-color {
     color: var(--pure-white);
 }
 
+.third-section > h4 {
+    font-weight: 500;
+}
+
 .first-section > button {
     color: var(--pure-white);
+    font-weight: 700;
     background-color: var(--mouse-hover-object-color);
 }
 
