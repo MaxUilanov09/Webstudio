@@ -12,26 +12,92 @@
 
 body {
     font-family: 'Roboto';
+    letter-spacing: 0.03;
 }
 
 h1 {
     font-weight: 900;
 }
 
-h2, h4 {
-    font-weight: 700;
+.header-item {
+    letter-spacing: 0.02;
 }
 
 .web-studio {
     font-family: 'Raleway';
     font-weight: 700;
-}
-header {
-    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.17;
 }
 
-footer {
+.first-section-header {
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06;
+}
+
+.first-section-button {
+    display: block;
+    color: var(--pure-white);
+    font-weight: 700;
+    background-color: var(--mouse-hover-object-color);
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.second-section-item {
+    display: inline-block;
+    text-overflow: clip;
+    margin: 22.5px;
+}
+
+.second-section-header {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+}
+
+.second-section-text {
+    
+}
+
+.image-section-header {
+    font-weight: 700;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.17;
+}
+
+.image-section-img {
+    display: inline;
+    margin: 0 20px;
+}
+
+.third-section-header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.17;
+}
+
+.third-section-item {
+    /*display: inline;*/
+    background-color: var(--pure-white);
+}
+
+header {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.17
+}
+
+footer, .second-section-text {
     font-weight: 400;
+    font-size: 14;
+    line-height: 1.71;
 }
 
 p, .plain-text-color {
@@ -39,7 +105,7 @@ p, .plain-text-color {
     font-weight: 400;
 }
 
-.header-link, h2, h4 {
+.header-link, .image-section-header, .second-section-header, .third-section-header {
     color: var(--title-text-color);
 }
 
@@ -55,18 +121,8 @@ p, .plain-text-color {
     background: var(--third-section-bg-color);
 }
 
-.first-section > h1, .white-text {
+.first-section-header, .white-text {
     color: var(--pure-white);
-}
-
-.third-section > h4 {
-    font-weight: 500;
-}
-
-.first-section > button {
-    color: var(--pure-white);
-    font-weight: 700;
-    background-color: var(--mouse-hover-object-color);
 }
 
 .unpure-white-text {
