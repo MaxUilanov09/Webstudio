@@ -13,6 +13,7 @@
 body {
     font-family: 'Roboto';
     letter-spacing: 0.03;
+    list-style: none;
 }
 
 h1 {
@@ -30,11 +31,19 @@ h1 {
     line-height: 1.17;
 }
 
+.first-section {
+    height: 600px;
+}
+
 .first-section-header {
+    width: 696px;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06;
+    margin: auto;
+    padding-top: 200px;
+    padding-bottom: 30px;
 }
 
 .first-section-button {
@@ -61,9 +70,7 @@ h1 {
     line-height: 1.17;
 }
 
-.second-section-text {
-    
-}
+/*.second-section-text {}*/
 
 .image-section-header {
     font-weight: 700;
@@ -127,4 +134,10 @@ p, .plain-text-color {
 
 .unpure-white-text {
     color: var(--sixty-percent-white);
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: auto;
 }
