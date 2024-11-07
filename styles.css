@@ -10,9 +10,13 @@
 
 /*I don't know how to do multicolored text for word 'WebStudio'*/
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Roboto';
-    letter-spacing: 0.03;
+    letter-spacing: 0.03em;
     list-style: none;
 }
 
@@ -33,6 +37,7 @@ h1 {
 
 .first-section {
     height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/first_section_background.png);
 }
 
 .first-section-header {
@@ -41,9 +46,9 @@ h1 {
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06;
-    margin: auto;
+    margin: 0 auto;
     padding-top: 200px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .first-section-button {
@@ -55,22 +60,30 @@ h1 {
     line-height: 1.875;
     letter-spacing: 0.06;
     text-align: center;
+    padding: 10px 32px;
     margin: 0 auto;
+    border-radius: 4px;
 }
 
 .second-section-item {
     display: inline-block;
+    width: 270px;
+    height: 248px;
     text-overflow: clip;
-    margin: 22.5px;
+    
 }
 
 .second-section-header {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.17;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-/*.second-section-text {}*/
+.second-section-text {
+    margin: 0;
+}
 
 .image-section-header {
     font-weight: 700;
@@ -79,9 +92,38 @@ h1 {
     line-height: 1.17;
 }
 
+.image-section-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding-left: 0;
+    margin-bottom: 94px;
+}
+
+.image-section-item {
+    display: block;
+    width: 370px;
+    height: 294px;
+}
+
 .image-section-img {
-    display: inline;
-    margin: 0 20px;
+    display: block;
+}
+
+.third-section-title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.16;
+    padding-top: 94px;
+    padding-bottom: 50px;
+}
+
+.third-section-list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-bottom: 94px;
+    margin-bottom: 0px;
 }
 
 .third-section-header {
@@ -91,7 +133,10 @@ h1 {
 }
 
 .third-section-item {
-    /*display: inline;*/
+    text-align: center;
+    display: block;
+    width: 270px;
+    height: 368px;
     background-color: var(--pure-white);
 }
 
@@ -120,7 +165,7 @@ p, .plain-text-color {
     color:var(--mouse-hover-object-color)
 }
 
-.first-section, footer {
+footer {
     background: var(--first-section-bg-color);
 }
 
@@ -139,5 +184,41 @@ p, .plain-text-color {
 .container {
     width: 1200px;
     margin: 0 auto;
-    padding: auto;
+}
+
+.header-wrap {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.header-list {
+    display: flex;
+    justify-content: space-between; 
+    list-style: none;
+}
+
+.header-list-one {
+    width: 281px;
+}
+
+.plain-text-color {
+    margin-left: 50px;
+}
+
+.footer-webstudio {
+    padding-top: 60px;
+    padding-left: 0;
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.second-section-list {
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
+    margin: 94px auto;
 }
