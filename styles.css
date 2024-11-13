@@ -38,6 +38,8 @@ h1 {
 .first-section {
     height: 600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./images/first_section_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .first-section-header {
@@ -184,6 +186,9 @@ footer {
 .container {
     width: 1200px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid orange;
 }
 
 .header-wrap {
