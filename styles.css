@@ -188,7 +188,7 @@ footer {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 }
 
 .header-wrap {
