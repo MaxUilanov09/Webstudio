@@ -1,15 +1,18 @@
 :root{
     --title-text-color: #212121;
+    --modal-border-color: #21212133;
     --mouse-hover-object-color: #2196F3;
     --p-text-color: #757575;
+    --modal-placeholder-color: #75757580;
     --icon-dormant-color: #AFB1B8;
     --first-section-bg-color: #2F303A;
     --image-section-text-bg-color: #2f303acc;
     --third-section-bg-color: #F5F4FA;
     --pure-white: #FFFFFF;
     --pure-black: #000000;
-    --sixty-percent-white: rgba(255, 255, 255, 0.6);
-    --ten-percent-white: rgba(255, 255, 255, 0.1);
+    --sixty-percent-white: #ffffff99;
+    --thirty-percent-white: #ffffff4d;
+    --ten-percent-white: #ffffff1a;
 }
 
 /*I don't know how to do multicolored text for word 'WebStudio'*/
@@ -29,6 +32,7 @@ h1 {
 }
 
 .header-item {
+    position: relative;
     letter-spacing: 0.02;
     height: 16px;
 }
@@ -137,7 +141,6 @@ h1 {
 
 .image-section-text {
     color: var(--pure-white);
-    font-family: 'Roboto';
     font-size: 14px;
     line-height: 1.14;
     font-weight: 700;
@@ -198,7 +201,19 @@ p, .plain-text-color {
 }
 
 .header-link:hover {
-    color:var(--mouse-hover-object-color)
+    color: var(--mouse-hover-object-color);
+}
+
+.header-link:hover::after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    bottom: -33px;
+    left: 0;
+    background-color: var(--mouse-hover-object-color);
 }
 
 footer {
@@ -241,6 +256,10 @@ footer {
     width: 281px;
 }
 
+.plain-text-color:hover {
+    color: var(--mouse-hover-object-color);
+}
+
 .header-icon-svg-mail {
     width: 16px;
     height: 12px;
@@ -248,7 +267,7 @@ footer {
     margin-right: 10px;
 }
 
-.header-link:hover .header-icon-svg-mail {
+.plain-text-color:hover .header-icon-svg-mail {
     fill: var(--mouse-hover-object-color);
 }
 
@@ -258,6 +277,10 @@ footer {
     margin: 0;
     margin-right: 10px;
     fill: var(--p-text-color);
+}
+
+.plain-text-color:hover .header-icon-svg-phone {
+    fill: var(--mouse-hover-object-color);
 }
 
 .plain-text-color {
@@ -332,8 +355,13 @@ footer {
     line-height: 1;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--pure-white);
+    color: var(--pure-black);
     margin-right: 8px;
-    margin-left: 95.39%;
+    margin-left: 95%;
+}
+
+.close-modal-button:hover {
+    color: var(--mouse-hover-object-color);
 }
 
 .modal-title {
@@ -341,6 +369,152 @@ footer {
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
+}
+
+.modal-form {
+    width: 448px;
+    height: 386px;
+    margin-left: 40px;
+}
+
+.modal-text {
+    font-size: 12px;
+    line-height: 1.167;
+    font-weight: 400;
+    border-radius: 4px;
+    border-color: var(--modal-border-color);
+    border-style: inset;
+    border-width: 1px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    width: 448px;
+    height: 40px;
+}
+
+.input-group-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 11px 12px;
+}
+
+.input-group-input {
+    display: inline-block;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    width: 400px;
+    height: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.modal-svg {
+    fill: var(--title-text-color);
+}
+
+.modal-svg-name {
+    width: 12px;
+    height: 12px;
+    margin: 14px 12px;
+}
+.modal-svg-phone {
+    width: 13px;
+    height: 13px;
+    margin: 13px 12px 14px;
+}
+.modal-svg-mail {
+    width: 15px;
+    height: 12px;
+    margin: 14px 12px;
+}
+
+.modal-text:hover .modal-svg-name {
+    fill: var(--mouse-hover-object-color);
+}
+.modal-text:hover .modal-svg-phone {
+    fill: var(--mouse-hover-object-color);
+}
+.modal-text:hover .modal-svg-mail {
+    fill: var(--mouse-hover-object-color);
+}
+
+.input-group-comment {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.input-group-input-comment {
+    width: 416px;
+    height: 96px;
+    padding: 0;
+    margin: 12px 16px;
+}
+
+.input-group-input-comment::placeholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    line-height: 1.167;
+    font-weight: 400;
+    color: var(--modal-placeholder-color);
+}
+
+.modal-text-name {
+}
+.modal-input {
+}
+.modal-input-name {
+}
+.modal-text-phone {
+}
+.modal-input-phone {
+}
+.modal-text-mail {
+}
+.modal-input-mail {
+}
+.modal-text-comment {
+}
+.modal-input-comment {
+}
+
+.modal-checkbox-label {
+    width: 425px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 1.714;
+    font-weight: 400;
+    color: var(--p-text-color);
+    margin-left: 12px;
+}
+
+.modal-checkbox-input {
+    border-width: 2px;
+    border-color: var(--title-text-color);
+}
+
+.modal-checkbox-link {
+    color: var(--mouse-hover-object-color);
+    text-decoration: underline;
+}
+
+.modal-button-exit {
+    display: block;
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: var(--mouse-hover-object-color);
+    font-size: 16px;
+    line-height: 1.875;
+    font-weight: 700;
+    color: var(--pure-white);
+    border: none;
+    margin: 30px auto 0;
 }
 
 .icon-list {
@@ -378,7 +552,6 @@ footer {
 }
 
 .fourth-section-title {
-    font-family: 'Roboto';
     font-size: 36px;
     font-weight: 700;
     line-height: 1.167;
@@ -428,7 +601,6 @@ footer {
 }
 
 .social-contact-title {
-    font-family: 'Roboto';
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -468,4 +640,65 @@ footer {
 
 .social-contact-icon-link:hover {
     background-color: var(--mouse-hover-object-color);
+}
+
+.social-mass-send {
+    margin-left: 93px;
+    margin-top: 72px;
+}
+
+.social-mass-send-title {
+    font-size: 14px;
+    line-height: 1.17;
+    font-weight: 700;
+    color: var(--pure-white);
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.social-mass-send-form {
+    width: 570px;
+    height: 50px;
+}
+
+.social-mass-send-form-input {
+    width: 358px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: var(--sixty-percent-white);
+    background-color: var(--first-section-bg-color);
+    border-color: var(--thirty-percent-white);
+    border-radius: 4px;
+    border-style: inset;
+    border-width: 1px;
+    padding: 0;
+    padding-left: 16px;
+}
+
+.social-mass-send-form-button {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.875;
+    font-weight: 700;
+    text-align: center;
+    color: var(--pure-white);
+    background-color: var(--mouse-hover-object-color);
+    padding: 0;
+    margin-left: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.social-mass-send-form-svg {
+    fill: var(--pure-white);
+    position: absolute;
+    top: 13px;
+    left: 153px;
+    width: 24px;
+    height: 24px;
 }

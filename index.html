@@ -21,7 +21,7 @@
             </ul>
             <ul class="header-list header-list-two">
                 <li class="header-item">
-                    <a class="header-link" href="#"><svg class="header-icon-svg-mail"><use href="./symbol-defs.svg#icon-mail"></use></svg>info@devstudio.com</a>
+                    <a class="plain-text-color" href="#"><svg class="header-icon-svg-mail"><use href="./symbol-defs.svg#icon-mail"></use></svg>info@devstudio.com</a>
                 </li>
                 <li class="header-item">
                     <a class="plain-text-color" href="#"><svg class="header-icon-svg-phone"><use href="./symbol-defs.svg#icon-phone"></use></svg>+38 096 111 11 11</a>
@@ -35,32 +35,37 @@
                 <button type="button" class="close-modal-button" button-modal-close2>✕</button>
                 <h3 class="modal-title">Залиште свої дані, ми вам передзвонимо</h3>
                 <form action="" class="modal-form">
-                    <p class="input-description-text">Ім'я</p>
-                    <div class="input-group">
-                        <div class="input-group-icon1"></div>
-                        <input type="text" class="input-group-input">
-                    </div>
-                    <p class="input-description-text">Телефон</p>
-                    <div class="input-group">
-                        <div class="input-group-icon2"></div>
-                        <input type="text" class="input-group-input">
-                    </div>
-                    <p class="input-description-text">Пошта</p>
-                    <div class="input-group">
-                        <div class="input-group-icon3"></div>
-                        <input type="text" class="input-group-input">
-                    </div>
-                    <p class="input-description-text">Коментар</p>
-                    <div class="input-group">
-                        <div class="input-group-icon4"></div>
-                        <input type="text" class="input-group-input">
-                    </div>
+                    <label class="modal-text modal-text-name">
+                        Ім'я
+                        <svg class="modal-svg modal-svg-name">
+                            <use href="./symbol-defs.svg#icon-person-modal"></use>
+                        </svg>
+                        <input type="text" class="modal-input modal-input-name">
+                    </label>
+                    <label class="modal-text modal-text-phone">
+                        Телефон
+                        <svg class="modal-svg modal-svg-phone">
+                            <use href="./symbol-defs.svg#icon-phone-modal"></use>
+                        </svg>
+                        <input type="text" class="modal-input modal-input-phone">
+                    </label>
+                    <label class="modal-text modal-text-mail">
+                        Пошта
+                        <svg class="modal-svg modal-svg-mail">
+                            <use href="./symbol-defs.svg#icon-email-modal"></use>
+                        </svg>
+                        <input type="text" class="modal-input modal-input-mail">
+                    </label>
+                    <label class="modal-text modal-text-comment">
+                        Коментар
+                        <input placeholder="Введіть текст" type="text" class="modal-input modal-input-comment">
+                    </label>
                     <label class="modal-checkbox-label">
                         <input type="checkbox" name="" class="modal-checkbox-input">
                         Погоджуюся з розсилкою та приймаю <a href="#" class="modal-checkbox-link">Умови договору</a>
                     </label>
-                    <button type="button" class="modal-button-exit" button-modal-close></button>
                 </form>
+                <button type="button" class="modal-button-exit" button-modal-close>Відправити</button>
             </div>
         </div>
         <section class="first-section">
@@ -400,6 +405,18 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="social-mass-send">
+                <p class="social-mass-send-title">Підпишіться на розсилку</p>
+                <form action="" class="social-mass-send-form">
+                    <input placeholder="E-mail" type="text" class="social-mass-send-form-input">
+                    <button type="button" class="social-mass-send-form-button">
+                        <svg class="social-mass-send-form-svg">
+                            <use href="./symbol-defs.svg#icon-send"></use>
+                        </svg>
+                        Підписатися
+                    </button>
+                </form>
             </div>
         <div>
     </footer>
