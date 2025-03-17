@@ -15,8 +15,6 @@
     --ten-percent-white: #ffffff1a;
 }
 
-/*I don't know how to do multicolored text for word 'WebStudio'*/
-
 a {
     text-decoration: none;
 }
@@ -200,11 +198,15 @@ p, .plain-text-color {
     color: var(--title-text-color);
 }
 
+.header-link, .plain-text-color {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .header-link:hover {
     color: var(--mouse-hover-object-color);
 }
 
-.header-link:hover::after {
+.header-link::after {
     content: " ";
     display: inline-block;
     position: absolute;
@@ -213,8 +215,14 @@ p, .plain-text-color {
     border-radius: 2px;
     bottom: -33px;
     left: 0;
+    background-color: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-link:hover::after {
     background-color: var(--mouse-hover-object-color);
 }
+
 
 footer {
     background: var(--first-section-bg-color);
@@ -265,6 +273,7 @@ footer {
     height: 12px;
     margin: 0;
     margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .plain-text-color:hover .header-icon-svg-mail {
@@ -277,6 +286,7 @@ footer {
     margin: 0;
     margin-right: 10px;
     fill: var(--p-text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .plain-text-color:hover .header-icon-svg-phone {
@@ -358,6 +368,7 @@ footer {
     color: var(--pure-black);
     margin-right: 8px;
     margin-left: 95%;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal-button:hover {
@@ -420,16 +431,19 @@ footer {
     width: 12px;
     height: 12px;
     margin: 14px 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-svg-phone {
     width: 13px;
     height: 13px;
     margin: 13px 12px 14px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-svg-mail {
     width: 15px;
     height: 12px;
     margin: 14px 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-text:hover .modal-svg-name {
@@ -536,13 +550,14 @@ footer {
     display: inline-block;
     fill: var(--icon-dormant-color);
     padding: 12px;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-link:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 50%;
     background-color: var(--mouse-hover-object-color);
     fill: var(--pure-white);
 }
@@ -577,7 +592,7 @@ footer {
     fill: var(--icon-dormant-color);
     border: 1px solid var(--icon-dormant-color);
     border-radius: 4px;
-    transition: fill 200ms ease-in, border-color 200ms ease-in;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fourth-section-icon-list-item:hover {
@@ -631,15 +646,16 @@ footer {
     border-radius: 50%;
     background-color: var(--ten-percent-white);
     fill: var(--pure-white);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-contact-icon-link:hover {
+    background-color: var(--mouse-hover-object-color);
 }
 
 .social-contact-icon-svg {
     width: 20px;
     height: 20px;
-}
-
-.social-contact-icon-link:hover {
-    background-color: var(--mouse-hover-object-color);
 }
 
 .social-mass-send {
